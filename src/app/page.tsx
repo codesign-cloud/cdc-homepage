@@ -46,11 +46,11 @@ export default function Page() {
                 className="relative inline-flex items-center justify-center py-3.5 text-base font-bold text-white transition-all duration-200 bg-gray-900 border border-transparent px-9 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 font-pj hover:bg-opacity-90 rounded-xl"
                 role="button"
               >
-                Get building
+                Start building
               </a>
             </div>
 
-            <p className="mt-5 text-sm font-normal text-gray-500 font-pj">No credit card required</p>
+            <p className="mt-5 text-sm font-normal text-gray-500 font-pj">something awesome</p>
           </div>
         </div>
       </div>
