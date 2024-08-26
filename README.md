@@ -1,9 +1,9 @@
 
-https://github.com/codesign-cloud/cdc-homepage/
-
 `CDC-Homepage` is a base for creating modern product landing pages. Built with Next.js and Tailwind CSS, it offers a modern foundation for quickly launching homepages for your products.
 
-#### Clone from base repo
+https://github.com/codesign-cloud/cdc-homepage/
+
+### Clone from base repo
 
 ``````
 # Clone the base repo for a new homepage
@@ -21,7 +21,7 @@ git remote set-url origin https://github.com/userX/projectX.git
 git remote add base https://github.com/your-username/base-homepage.git
 ``````
 
-#### Pull updates from base repo
+### Pull updates from base repo
 `````
 # Fetch updates from the base repo
 git fetch base
@@ -32,13 +32,14 @@ git fetch base
 git merge base/main
 `````
 
+------------------------------------
+
+## Prerequisites
+- Make sure GitHub Pages is enabled for your repository (GitHub > Settings > Pages > Build and deployment > Source > GitHub Actions)
 
 ------------------------------------ 
 
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
+### Getting Started
 
 First, run the development server:
 
@@ -52,7 +53,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+### Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
