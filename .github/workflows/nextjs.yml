@@ -1,6 +1,6 @@
 # Build and deploy Next.js static site to GH pages
 
-name: Build and deploy Next.js static site to GH pages
+name: "Build and deploy Next.js static site to GH pages"
 
 on:
   # Runs on pushes targeting the default branch
@@ -25,6 +25,7 @@ concurrency:
 jobs:
   # Build job
   build:
+    name: "Build Next.js static site"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -80,6 +81,7 @@ jobs:
 
   # Deployment job
   deploy:
+    name: "Deploy site to GitHub pages"
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
