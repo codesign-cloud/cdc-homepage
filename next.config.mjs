@@ -21,12 +21,6 @@ const nextConfig = {
         NEXT_PUBLIC_SAMPLE: 'my-value-2', // NEXT_PUBLIC_* = Available at client-side
     },
 
-    content: [
-        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    ],
-
     experimental: {
         //appDir: true, // Not needed beyond Next.js 13.4
         //serverComponentsExternalPackages: [],
