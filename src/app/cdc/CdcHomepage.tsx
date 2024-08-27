@@ -1,14 +1,17 @@
 import React from 'react';
 import ColorThemeSwitcher from '@/app/ColorThemeSwitcher';
+import { getDependencyVersion } from './utils';
 
 interface FeatItem {
     name: string;
 }
 
 const features: FeatItem[] = [
-    { name: "Next.js" },
-    { name: "Tailwind CSS" },
-    { name: "TypeScript" },
+    { name: `Next.js ${getDependencyVersion('next', 'minor')}` },
+    { name: `React ${getDependencyVersion('react', 'major')}` },
+    { name: `Tailwind CSS ${getDependencyVersion('tailwindcss', 'patch')}` },
+    { name: `TypeScript ${getDependencyVersion('typescript', 'major')}` },
+    { name: "Dark Mode support" },
     { name: "Default .gitignore / next.config" },
     { name: "Deploy to GitHub Pages" },
 ];
