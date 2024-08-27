@@ -18,7 +18,7 @@ git remote set-url origin https://github.com/userX/projectX.git
 
 ``````
 # Add this base repo as a secondary remote named 'base'
-git remote add base https://github.com/your-username/base-homepage.git
+git remote add base https://github.com/codesign-cloud/cdc-homepage
 ``````
 
 ### Pull updates from base repo
@@ -30,6 +30,10 @@ git fetch base
 `````
 # Merge the updates
 git merge base/main
+
+# If you encounter a "fatal: refusing to merge unrelated histories" error, 
+# you may merge with the --allow-unrelated-histories flag (at your own risk)
+git merge base/main --allow-unrelated-histories
 `````
 
 ------------------------------------
