@@ -32,8 +32,12 @@ git fetch base
 git merge base/main
 
 # If you encounter a "fatal: refusing to merge unrelated histories" error, 
-# you may merge with the --allow-unrelated-histories flag (at your own risk)
+# you may merge with the --allow-unrelated-histories flag 
+# [[IMP]] Do this at your own risk; this will cause merge conflicts
 git merge base/main --allow-unrelated-histories
+# To accept incoming changes from base:
+git merge -X theirs base/main --allow-unrelated-histories
+
 `````
 
 ------------------------------------
