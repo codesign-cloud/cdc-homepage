@@ -46,6 +46,7 @@ const nextConfig = {
     },
 
     images: {
+        unoptimized: true, // Required for static export
         remotePatterns: [
             {
                 protocol: "https",
