@@ -1,5 +1,5 @@
 import React from 'react';
-import ColorThemeSwitcher from '@/app/ColorThemeSwitcher';
+import ColorThemeSwitcher from '@/app/cdc/ColorThemeSwitcher';
 import { getDependencyVersion } from './utils';
 
 interface FeatItem {
