@@ -45,6 +45,20 @@ git merge -X theirs base/main --allow-unrelated-histories
 ## Prerequisites
 - Make sure GitHub Pages is enabled for your repository (GitHub > Settings > Pages > Build and deployment > Source > GitHub Actions)
 
+## Setting paths for deploying on GH Pages
+If you're using `img` tag for images with say, `/assets/` from your public dir. 
+
+Repo > Settings > Secrets and variables > Actions > Repository secrets > New repository secret
+Add a new secret named `BASE_PATH` with the value `https://username.github.io/your-repo-name`
+
+This can be used in your code like so:
+```html
+import { basePath } from '@/app/basePath';
+...
+..
+    <img src={`${basePath}/assets/logo.svg`} alt="Logo" />
+```
+
 ------------------------------------ 
 
 ### Getting Started
