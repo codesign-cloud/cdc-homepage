@@ -1,7 +1,7 @@
 
 `CDC-Homepage` is a base for creating modern product landing pages. Built with Next.js and Tailwind CSS, it offers a modern foundation for quickly launching homepages for your products.
 
-https://github.com/codesign-cloud/cdc-homepage/
+You can see the GH Pages' live build [here](https://codesign-cloud.github.io/cdc-homepage/).
 
 ### Clone from base repo
 
@@ -46,13 +46,13 @@ git merge -X theirs base/main --allow-unrelated-histories
 - Make sure GitHub Pages is enabled for your repository (GitHub > Settings > Pages > Build and deployment > Source > GitHub Actions)
 
 ## Setting paths for deploying on GH Pages
-If you're using `img` tag for images with say, `/assets/` from your public dir. 
+If you're using the `img` tag for images with say, `/assets/` from your public dir. you will need to change the base url.
 
-Repo > Settings > Secrets and variables > Actions > Repository secrets > New repository secret
+Go to Repo > Settings > Secrets and variables > Actions > Repository secrets > New repository secret
 Add a new secret named `BASE_PATH` with the value `https://username.github.io/your-repo-name`
 
-This can be used in your code like so:
-```html
+This can be used in your JSX page like so:
+```jsx
 import { basePath } from '@/app/basePath';
 ...
 ..
@@ -61,7 +61,7 @@ import { basePath } from '@/app/basePath';
 
 ------------------------------------ 
 
-### Getting Started
+### Getting Started (Next.js Readme)
 
 First, run the development server:
 
@@ -82,4 +82,4 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/)
