@@ -21,37 +21,45 @@ git remote set-url origin https://github.com/userX/projectX.git
 git remote add base https://github.com/codesign-cloud/cdc-homepage
 ``````
 
-### Pull updates from base repo
+### Updating your fork with changes from the Base Repository (if required)
 `````
-# Fetch updates from the base repo
+# Fetch the latest changes from the base repository
 git fetch base
 `````
 
 `````
-# Merge the updates
+# Merge the fetched changes into your local main branch
 git merge base/main
 
-# If you encounter a "fatal: refusing to merge unrelated histories" error, 
-# you may merge with the --allow-unrelated-histories flag 
-# [[IMP]] Do this at your own risk; this will cause merge conflicts
+# In case you encounter the "fatal: refusing to merge unrelated histories" error,
+# you can use the --allow-unrelated-histories flag to bypass this.
+# ⚠️ Use this flag carefully, as it may lead to complex merge conflicts.
 git merge base/main --allow-unrelated-histories
-# To accept incoming changes from base:
+
+# To prioritize and accept all incoming changes from the base repository, use:
+# ⚠️ Again, use this flag carefully, as it may lead to complex merge conflicts.
 git merge -X theirs base/main --allow-unrelated-histories
 
 `````
 
 ------------------------------------
-
 ## Prerequisites
-- Make sure GitHub Pages is enabled for your repository (GitHub > Settings > Pages > Build and deployment > Source > GitHub Actions)
+- Ensure that GitHub Pages is activated for your repository. Navigate to GitHub > Settings > Pages > Build and deployment > Source and select GitHub Actions.
 
-## Setting paths for deploying on GH Pages
-If you're using the `img` tag for images with say, `/assets/` from your public dir. you will need to change the base url.
+## Configuring Paths for GitHub Pages Deployment
 
-Go to Repo > Settings > Secrets and variables > Actions > Repository secrets > New repository secret
-Add a new secret named `BASE_PATH` with the value `https://username.github.io/your-repo-name`
+**Note:** This configuration is only necessary if your GitHub Pages site is hosted at `username.github.io/your-repo-name`. If you are using a custom domain, this step is not required.
 
-This can be used in your JSX page like so:
+When using static assets, such as images with the `img` tag, that are located in the `/assets/` directory within your public folder, you need to adjust the base URL accordingly.
+
+To set this up, follow these steps:
+1. Navigate to your repository on GitHub.
+2. Go to `Settings` > `Secrets and variables` > `Actions` > `Repository secrets`.
+3. Click on `New repository secret`.
+4. Add a new secret named `BASE_PATH` with the value `https://username.github.io/your-repo-name`.
+
+You can then utilize this base path in your JSX pages as shown below:
+
 ```jsx
 import { basePath } from '@/app/basePath';
 ...
