@@ -9,7 +9,18 @@ You can see the GH Pages' live build [here](https://codesign-cloud.github.io/cdc
 # Clone the base repo for a new homepage
 git clone https://github.com/codesign-cloud/cdc-homepage.git projectX
 cd projectX
+npm i 
+npm run dev
 ``````
+You are now ready to start developing your own static homepage.
+
+--------------------------------------------------------------------
+
+## Prerequisites
+- Ensure that GitHub Pages is activated for your new repository on GH. Navigate to GitHub > Settings > Pages > Build and deployment > Source and select GitHub Actions.
+
+--------------------------------------------------------------------
+### Add base repo as remote (if required)
 
 ``````
 # Change the origin to the new project's repo
@@ -43,8 +54,6 @@ git merge -X theirs base/main --allow-unrelated-histories
 `````
 
 ------------------------------------
-## Prerequisites
-- Ensure that GitHub Pages is activated for your repository. Navigate to GitHub > Settings > Pages > Build and deployment > Source and select GitHub Actions.
 
 ## Configuring Paths for GitHub Pages Deployment
 
