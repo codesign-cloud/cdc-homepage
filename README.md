@@ -1,13 +1,13 @@
 
 `CDC-Homepage` is a base for creating modern product landing pages. Built with Next.js and Tailwind CSS, it offers a modern foundation for quickly launching homepages for your products.
 
-You can see the GH Pages' live build [here](https://codesign-cloud.github.io/cdc-homepage/).
+You can see the GH Pages' live build [here](https://codesign-cloud.github.io/cdc-next-static-homepage-base/).
 
 ### Clone from base repo
 
 ``````
 # Clone the base repo for a new homepage
-git clone https://github.com/codesign-cloud/cdc-homepage.git projectX
+git clone https://github.com/codesign-cloud/cdc-next-static-homepage-base.git projectX
 cd projectX
 npm i 
 npm run dev
@@ -29,7 +29,7 @@ git remote set-url origin https://github.com/userX/projectX.git
 
 ``````
 # Add this base repo as a secondary remote named 'base'
-git remote add base https://github.com/codesign-cloud/cdc-homepage
+git remote add base https://github.com/codesign-cloud/cdc-next-static-homepage-base.git
 ``````
 
 ### Updating your fork with changes from the Base Repository (if required)
@@ -57,7 +57,7 @@ git merge -X theirs base/main --allow-unrelated-histories
 
 ## Configuring Paths for GitHub Pages Deployment
 
-**Note:** This configuration is only necessary if your GitHub Pages site is hosted at `username.github.io/your-repo-name`. If you are using a custom domain, this step is not required.
+**Note:** This configuration is only necessary if your GitHub Pages site is hosted at `username.github.io/your-repo-name`. If you are using a custom domain or subdomain, this step is not required, as / points to the root.
 
 When using static assets, such as images with the `img` tag, that are located in the `/assets/` directory within your public folder, you need to adjust the base URL accordingly.
 
@@ -65,7 +65,7 @@ To set this up, follow these steps:
 1. Navigate to your repository on GitHub.
 2. Go to `Settings` > `Secrets and variables` > `Actions` > `Repository secrets`.
 3. Click on `New repository secret`.
-4. Add a new secret named `BASE_PATH` with the value `https://username.github.io/your-repo-name`.
+4. Add a new secret named `BASE_PATH` with the value `https://username.github.io/your-repo-name` (no trailing slash)
 
 You can then utilize this base path in your JSX pages as shown below:
 

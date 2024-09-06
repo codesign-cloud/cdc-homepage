@@ -1,6 +1,6 @@
 {
-  "name": "cdc-homepage",
-  "version": "1.0",
+  "name": "cdc-next-static-homepage-base",
+  "version": "1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
