@@ -6,8 +6,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: process.env.NEXT_PUBLIC_APP_TITLE,
-  description: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
+  title: process.env.NEXT_PUBLIC_APP_TITLE ?? "CDC HOME STARTER",
+  description: process.env.NEXT_PUBLIC_APP_DESCRIPTION ?? "Next static homepage starter",
 };
 
 export default function RootLayout({
